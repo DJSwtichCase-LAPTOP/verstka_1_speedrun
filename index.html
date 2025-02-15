@@ -14,58 +14,75 @@
             background-size: cover;
             background-position: center;
         }
+        .full-screen-image {
+            object-fit: cover; /* Ensures the image covers the entire area */
+        }
+        .platforms {
+        background: url('https://static.wixstatic.com/media/b59272_5a7ff764999644b781847da6e7b89e81~mv2.png/v1/fill/w_1024,h_145,al_c,q_85,enc_avif,quality_auto/b59272_5a7ff764999644b781847da6e7b89e81~mv2.png"');
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center;
+        }
     </style>
 </head>
 
 <body>
+   
+
+    <img src="https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24788327/HKIA_Keyart_with_Logo.jpg?quality=90&strip=all&crop=7.8221490325237%2C0%2C84.355701934953%2C100&w=2400" alt="Full-Screen Image" class="full-screen-image vh-20 vw-100">
+
+    <div class="platforms">
+        <div class="container">
+            <div class="row">
+                <a>Game platforms</a>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src="pics/apple.webp">
+                    Apple Arcade
+                </div>
+                <div class="col">
+                    <img src="pics/nintendo.webp">
+                    Nintendo Switch
+                </div>
+                <div class="col">
+                    <img src="pics/steam.webp">
+                    Steam
+                </div>
+                <div class="col">
+                    <img src="pics/ps5.webp">
+                    Playstation 5
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    (July 28, 2023)
+                </div>
+                <div class="col">
+                    (January 30, 2025)
+                </div>
+                <div class="col">
+                    (January 30, 2025)
+                </div>
+                <div class="col">
+                    (Coming late 2025)
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
-        <main>
-    
-            <div class="container mt-5">
-                <!-- background idk -->
-                <img src="https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24788327/HKIA_Keyart_with_Logo.jpg?quality=90&strip=all&crop=7.8221490325237%2C0%2C84.355701934953%2C100&w=2400" alt="Adaptive Image" class="img-fluid">
-            </div>
-        </main>
-    </div>
-
-    <div class="container mt-5">
-        <div class="row">
-            <a>Game platforms</a>
-        </div>
-        <div class="row">
+        <div class="row mb-6 align-items-center">
             <div class="col">
-                <img src="pics/apple.webp">
-                Apple Arcade
+                <img src="pics/pic1.avif" class="img-fluid" style="max-width: 500px; max-height: 600px;">
             </div>
             <div class="col">
-                <img src="pics/nintendo.webp">
-                Nintendo Switch
-            </div>
-            <div class="col">
-                <img src="pics/steam.webp">
-                Steam
-            </div>
-            <div class="col">
-                <img src="pics/ps5.webp">
-                Playstation 5
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                (July 28, 2023)
-            </div>
-            <div class="col">
-                (January 30, 2025)
-            </div>
-            <div class="col">
-                (January 30, 2025)
-            </div>
-            <div class="col">
-                (Coming late 2025)
+                <h1>Making new friends is a big adventure.</h1>
+                <a>Embark on a cozy adventure with Hello Kitty and Friends and restore an abandoned island to its former glory. Can you solve the mystery hidden within?
+                Get to know supercute and friendly faces like Hello Kitty, Kuromi, Cinnamoroll, and more by discovering their likes, questing alongside them, and eventually becoming best friends. Craft rare items, solve ancient puzzles, and decorate cabins to bring new visitors and create your ultimate island paradise.</a>
             </div>
         </div>
     </div>
-
 
     <!-- Modal button -->
     <button type="button" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -94,6 +111,12 @@
         </div>
     </div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl);
+        });
+    </script>
 
 </body>
