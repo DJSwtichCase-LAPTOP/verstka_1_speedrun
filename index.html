@@ -23,60 +23,254 @@
         background-size: cover !important;
         background-position: center;
         }
+
+        .carousel-container {
+            max-width: 900px; /* Adjust width as needed */
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item {
+            flex: 0 0 80%; /* Show 80% of the slide */
+            margin: 0 10px; /* Add space for preview */
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item img {
+            border-radius: 10px; /* Optional: Rounded corners */
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%; /* Smaller button area */
+        }
+        
+       
+ 
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.card .img-wrapper {
+    max-width: 100%;
+    height: 13em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card img {
+    max-height: 100%;
+}
+@media (max-width: 767px) {
+  .card .img-wrapper {
+    height: 17em;
+  }
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    margin-bottom: 15px;
+}
+
+/* all indicators */
+.carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    background-color: gray;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+
+.carousel-indicators .active {
+    background-color: rgb(250, 41, 104); 
+    transform: scale(1.2); 
+}
+
+
+    @media (max-width: 992px) {
+    .test {
+        font-size:14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .test {
+        font-size:12px;
+    }
+}
+
+/* Small screens (Phones: < 768px) */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 1rem; /* 32px */
+    }
+    h2 {
+        font-size: 1.75rem; /* 28px */
+    }
+    h3 {
+        font-size: 1.5rem; /* 24px */
+    }
+}
+
+.pl-button {
+    transition: all 0.3s ease-in-out; 
+    background: #FFFEFC;
+    border-radius: 30px;
+    border: 2px solid rgb(29, 103, 205);
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.pl-button-txt {
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    margin-right: 4px;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    color: #1D67CD;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    display: inline-block;
+}
+
+
+.pl-button:hover {
+    background: rgb(29, 103, 205); 
+    border-color: #144D99;
+}
+
+.pl-button:hover .pl-button-txt {
+    color: #FFF; 
+    transform: scale(1.05); 
+}
+
+
+.pl-button:active {
+    transform: scale(0.95); 
+}
+
     </style>
 </head>
 
 <body>
    
+    
+
+     <div id="carouselExampleControls" class="carousel">
+        <div class="carousel-inner">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-bs-slide-to="4"></li>
+            </ol>
+            <div class="carousel-item active">
+                <div class="card"> 
+                    <div class="container">
+                        <div class="row d-flex flex-column flex-sm-row align-items-center">
+                
+                            <div class="col-md-4">
+                                <img src="pics/HK.avif" class="img-fluid">
+                            </div>
+                            <div class="col-md-5" style="max-width: 420px; max-height: 300px; padding:20px;">
+                                <h1>Hello Kitty</h1>
+                                <a>
+                                Hello Kitty is here to brighten your day! 
+                                Always happy to lend a hand, she’s thrilled to open a new island cafe and 
+                                to make sure everyone has a great time together. Her hobbies include lots of 
+                                baking and making new friends. As she always says, "you can never have too many friends!"</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                
+                <div class="card">
+                    <div class="container">
+                        <div class="row d-flex flex-column flex-sm-row align-items-center">
+                
+                            <div class="col-md-4">
+                                <img src="pics/HK.avif" class="img-fluid">
+                            </div>
+                            <div class="col-md-3" style="max-width: 420px;">
+                                <h1>Hello Kitty</h1>
+                                <a>
+                                Hello Kitty is here to brighten your day! 
+                                Always happy to lend a hand, she’s thrilled to open a new island cafe and 
+                                to make sure everyone has a great time together. Her hobbies include lots of 
+                                baking and making new friends. As she always says, "you can never have too many friends!"</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div> 
 
     <img src="https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24788327/HKIA_Keyart_with_Logo.jpg?quality=90&strip=all&crop=7.8221490325237%2C0%2C84.355701934953%2C100&w=2400" alt="Full-Screen Image" class="full-screen-image vh-20 vw-100">
 
-    <div class="platforms">
+    <div class="platforms" style="padding: 50px">
         <div class="container">
-            <div class="row">
+            <div class="row text-center" style="padding-bottom: 50px">
                 <a>Game platforms</a>
             </div>
+
+
+
             <div class="row">
                 <div class="col">
-                    <img src="pics/apple.webp">
-                    Apple Arcade
+                    <button class="pl-button">
+                        <span class=pl-button-txt>
+                            Play now on Nintendo Switch
+                        </span>
+                    </button>
                 </div>
                 <div class="col">
-                    <img src="pics/nintendo.webp">
-                    Nintendo Switch
-                </div>
-                <div class="col">
-                    <img src="pics/steam.webp">
-                    Steam
-                </div>
-                <div class="col">
-                    <img src="pics/ps5.webp">
-                    Playstation 5
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    (July 28, 2023)
-                </div>
-                <div class="col">
-                    (January 30, 2025)
-                </div>
-                <div class="col">
-                    (January 30, 2025)
-                </div>
-                <div class="col">
-                    (Coming late 2025)
+                    <button class="pl-button">
+                        <span class=pl-button-txt>
+                            Play now on Steam
+                        </span>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-
+    
     <div class="container">
-        <div class="row mb-6 align-items-center">
+        <div class="row d-flex flex-column flex-sm-row align-items-center">
+
             <div class="col">
-                <img src="pics/pic1.avif" class="img-fluid" style="max-width: 500px; max-height: 600px;">
+                <img src="pics/pic1.avif" class="img-fluid full-screen-image">
             </div>
-            <div class="col">
+            <div class="col test">
                 <h1>Making new friends is a big adventure.</h1>
                 <a>Embark on a cozy adventure with Hello Kitty and Friends and restore an abandoned island to its former glory. Can you solve the mystery hidden within?
                 Get to know supercute and friendly faces like Hello Kitty, Kuromi, Cinnamoroll, and more by discovering their likes, questing alongside them, and eventually becoming best friends. Craft rare items, solve ancient puzzles, and decorate cabins to bring new visitors and create your ultimate island paradise.</a>
@@ -119,4 +313,49 @@
         });
     </script>
 
+
+
+
+    
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let multipleCardCarousel = document.querySelector("#carouselExampleControls");
+
+    if (window.matchMedia("(min-width: 768px)").matches) {
+        let carousel = new bootstrap.Carousel(multipleCardCarousel, {
+            interval: false, // Disable automatic sliding
+            wrap: false, // Prevent wrapping at the end
+        });
+
+        let carouselInner = document.querySelector(".carousel-inner");
+        let carouselItems = document.querySelectorAll(".carousel-item");
+        let cardWidth = carouselItems[0].offsetWidth;
+        let totalWidth = carouselInner.scrollWidth;
+        let scrollPosition = 0;
+
+        document.querySelector("#carouselExampleControls .carousel-control-next").addEventListener("click", function () {
+            if (scrollPosition < totalWidth - cardWidth * 4) {
+                scrollPosition += cardWidth;
+            } else {
+                // Jump to the first slide
+                scrollPosition = 0;
+            }
+            carouselInner.scroll({ left: scrollPosition, behavior: "smooth" });
+        });
+
+        document.querySelector("#carouselExampleControls .carousel-control-prev").addEventListener("click", function () {
+            if (scrollPosition > 0) {
+                scrollPosition -= cardWidth;
+            } else {
+                // Jump to the last slide
+                scrollPosition = totalWidth - cardWidth * 4;
+            }
+            carouselInner.scroll({ left: scrollPosition, behavior: "smooth" });
+        });
+    } else {
+        multipleCardCarousel.classList.add("slide");
+    }
+}); 
+
+</script>
 </body>
