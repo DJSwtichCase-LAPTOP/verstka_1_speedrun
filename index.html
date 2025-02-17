@@ -240,6 +240,7 @@
             background-color: #0d416b; 
             color:#FFF;
             padding:40px 0px 40px 0px;
+            margin-bottom:80px;
         }
 
 .navbar {
@@ -269,15 +270,15 @@
 </head>
 
 <body>
-    <img src="pics/HKIA.jpg" alt="Full-Screen Image" class="img-fluid full-screen-image vw-100">
+    <img src="pics/HKIA.jpg" id="home" alt="Full-Screen Image" class="img-fluid full-screen-image vw-100">
 
-    
+    <!-- Navbar -->
         <div class="container">
             <nav class="navbar navbar-expand-md fixed-top">
                 <div class="container">
-                    <a class="navbar-brand fw-bold d-md-none" href="#">
+                    <!-- <a class="navbar-brand fw-bold d-md-none" href="#">
                         Test
-                    </a>
+                    </a> -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -285,19 +286,19 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav mx-auto align-items-center">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#index.html">Trailer</a>
+                                <a class="nav-link active" aria-current="page" href="#platforms">Platforms</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#about-us">Characters</a>
+                                <a class="nav-link" href="#ch">Characters</a>
                             </li>
-                            <a class="navbar-brand fw-bold d-none d-md-block" href="#index.html">
+                            <a class="navbar-brand fw-bold d-none d-md-block" href="#home">
                                 Home
                             </a>
                             <li class="nav-item">
-                                <a class="nav-link" href="#gallery">Community</a>
+                                <a class="nav-link" href="#yap">Community</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#contact">Gallery</a>
+                                <a class="nav-link" href="#gallery">Gallery</a>
                             </li>
                         </ul>
                     </div>
@@ -306,7 +307,7 @@
         </div>
     
      <!-- Characters -->
-    <div class="container" style="padding:80px 0px 80px 0px;">
+    <div class="container" id="ch" style="padding:80px 0px 80px 0px;">
         <div class="carousel slide" 
      id="carouselDemo"
      data-bs-wrap="true" 
@@ -462,7 +463,7 @@
        
     <!-- Platforms -->
 
-    <div class="platforms" style="padding:80px 0px 80px 0px;">
+    <div class="platforms" id="platforms" style="padding:80px 0px 80px 0px; margin-bottom:80px;">
         <div class="container">
 
             <div class="row">
@@ -494,7 +495,7 @@
 
     <!-- Yap -->
 
-    <div class="yap">
+    <div class="yap" id="yap">
         <div class="container ">
             <div class="row d-flex flex-column flex-sm-row align-items-center">
                 
@@ -503,13 +504,23 @@
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12" style="padding:20px;">
                     <h1>Making new friends is a big adventure</h1>
-                    <a>
+                    <h5>
                         Embark on a cozy adventure with Hello Kitty and Friends and restore an abandoned island to 
                         its former glory. Can you solve the mystery hidden within?
                         Get to know supercute and friendly faces like Hello Kitty,
                         Kuromi, Cinnamoroll, and more by discovering their likes, questing alongside
                         them, and eventually becoming best friends. Craft rare 
-                        items, solve ancient puzzles, and decorate cabins to bring new visitors and create your ultimate island paradise.</a>
+                        items, solve ancient puzzles, and decorate cabins to bring new visitors and create your ultimate island paradise.</h5>
+                    
+                    <!-- Modal button -->
+
+                    <button type="button" class="pl-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <span class="pl-button-txt" style="font-size:18px;">
+                    
+                            Join community
+                            
+                        </span>
+                    </button>
                 </div>
                 
             </div>
@@ -521,7 +532,7 @@
 
      <!-- Screenshots carousel -->
      
-     <div class="container">
+     <div class="container" id="gallery" style="margin-bottom:80px;">
         <div class="carousel slide" 
      id="carouselDemo1"
      data-bs-wrap="true" 
@@ -607,28 +618,13 @@
      </div>
 
 
-    <!-- Modal button -->
-    <button type="button" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Open Modal
-    </button>
-
-    <!-- Modal -->
+    <!-- Modal window -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Discord community Link</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body modal-background">
-                    <!--inside-->>
-                    <form>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -639,7 +635,7 @@
 
          <!-- Email -->
 
-    <section class="text-center position-relative">
+    <section class="text-center position-relative" style="margin-bottom:80px;">
         <img src="pics/pic2.avif" class="img-fluid" alt="" style="border-radius:15px;">
         <div class="position-absolute top-50 start-0 end-0 translate-middle-y mx-auto">
                         <h2>Let's keep in touch!</h2>
