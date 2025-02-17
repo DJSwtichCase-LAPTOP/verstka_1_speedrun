@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
     <style>
         /* Custom CSS for background image */
         .modal-background {
@@ -25,15 +26,20 @@
         background-position: center;
         }
 
+       
         .carousel-container {
             max-width: 900px; /* Adjust width as needed */
             margin: auto;
             overflow: hidden;
             position: relative;
         }
-        .carousel-inner {
+        .carousel-background {
             display: flex;
-            
+            padding:20px;
+            background-color: #2596be; 
+            font-family: "Nunito", sans-serif;
+            color:#FFF;
+            border-radius: 15px;
         }
 
         .carousel-item {
@@ -149,13 +155,13 @@
 /* Small screens (Phones: < 768px) */
 @media (max-width: 767px) {
     h1 {
-        font-size: 1rem; /* 32px */
+        font-size: 1rem; 
     }
     h2 {
-        font-size: 1.75rem; /* 28px */
+        font-size: 1rem; 
     }
     h3 {
-        font-size: 1.5rem; /* 24px */
+        font-size: 1.5rem; 
     }
 }
 
@@ -207,11 +213,11 @@
     background: url('pics/pic2.avif');
     background-repeat: no-repeat !important;
     background-position: center;
-    padding: 100px 0; /* Adjust padding for a better layout */
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    min-height: 100vh; /* Ensure it takes full viewport height */
+}
+@media (max-width: 768px) {
+  .email1 {
+    width: 70%;
+  }
 }
 
 
@@ -317,33 +323,40 @@
 
     <img src="pics/HKIA.jpg" alt="Full-Screen Image" class="full-screen-image vh-20 vw-100">
 
-    <div class="mailform">
-        <div class="container">
-            <div class="col-md-6">
-                    <h2>Let's keep in touch!</h2>
-                        <form id="emailForm" class="needs-validation" novalidate>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Enter your e-mail address</label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
-                                    
-                                    <div class="invalid-feedback">
-                                        Please enter a valid email address.
-                                    </div>
-                                    
-                                </div>
-                                <button type="submit" class="btn btn-primary">Subscribe!</button>
-                        </form>
-                </div>
-            </div>
-    </div>
-       
+    <!-- Email -->
 
+    <section class="text-center position-relative">
+        <img src="pics/pic2.avif" class="img-fluid" alt="">
+        <div class="position-absolute top-50 start-0 end-0 translate-middle-y mx-auto">
+                        <h2>Let's keep in touch!</h2>
+                        <div class="container">
+                          
+                            <div class="email1 col-md-5 mx-auto ">
+                                        <form id="emailForm" class="needs-validation" novalidate>
+                                                <div class="mb-3">
+                                                    <label for="email" class="form-label">Enter your e-mail address</label>
+                                                    <input type="email" class="form-control" id="email" name="email" required>
+                                                    
+                                                    <div class="invalid-feedback">
+                                                        Please enter a valid email address.
+                                                    </div>
+                                                    
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Subscribe!</button>
+                                        </form>
+                                </div>
+                            </div>
+                           
+                    
+        </div>
+    </section>
+
+ 
+       
+    <!-- Platforms -->
 
     <div class="platforms" style="padding: 50px">
         <div class="container">
-            <!-- <div class="row text-center" style="padding-bottom: 50px">
-                <a>Game platforms</a>
-            </div> -->
 
             <div class="row">
                 <div class="col-md-6">
@@ -367,75 +380,142 @@
         </div>
     </div>
     
-
+    <!-- Characters -->
     
     <div class="container">
         <div class="carousel slide" 
      id="carouselDemo"
      data-bs-wrap="true" 
-     data-bs-ride="carousel">
+     data-bs-ride="carousel"
+     >
     
                 <div class="carousel-inner">
-            
-                    <div class="carousel-item active">
-                        <div class="container">
-                            <div class="row d-flex flex-column flex-sm-row align-items-center">
                     
-                                <div class="col-md-4">
-                                    <img src="pics/HK.avif" class="img-fluid">
+                    <div class="carousel-background">
+                        
+
+                       <div class="container">
+                            <div class="row">
+                                <div class="col carousel-item active">
+                                    <div class="container">
+                                        <div class="row d-flex flex-column flex-sm-row align-items-center">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-4">
+                                                <img src="pics/HK.avif" class="img-fluid">
+                                            </div>
+                                            <div class="col-md-4" style="max-width: 420px; max-height: 300px; padding:20px;">
+                                                <h1>Hello Kitty</h1>
+                                                <a>
+                                                Hello Kitty is here to brighten your day! 
+                                                Always happy to lend a hand, she’s thrilled to open a new island cafe and 
+                                                to make sure everyone has a great time together. Her hobbies include lots of 
+                                                baking and making new friends. As she always says, "you can never have too many friends!"</a>
+                                            </div>
+                                            <div class="col-md-2"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-5" style="max-width: 420px; max-height: 300px; padding:20px;">
-                                    <h1>Hello Kitty</h1>
-                                    <a>
-                                    Hello Kitty is here to brighten your day! 
-                                    Always happy to lend a hand, she’s thrilled to open a new island cafe and 
-                                    to make sure everyone has a great time together. Her hobbies include lots of 
-                                    baking and making new friends. As she always says, "you can never have too many friends!"</a>
+                                
+                                <div class="carousel-item " 
+                                data-bs-interval="2000">
+                                <div class="container">
+                                    <div class="row d-flex flex-column flex-sm-row align-items-center">
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-4">
+                                            <img src="pics/MM.avif" class="img-fluid">
+                                        </div>
+                                        <div class="col-md-4" style="max-width: 420px; max-height: 300px; padding:20px;">
+                                            <h1>My Melody</h1>
+                                            <a>
+                                                Honest, good-natured, and sweet, My Melody manages her gift shop, “Small Gift, Big Smile: 
+                                                Tropical Edition”. 
+                                                My Melody was invited especially to Big Adventures Park to open her new store. 
+                                                She supplies everyone with 
+                                                interesting things, such as souvenirs and decorations!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                        
+                                <div class="carousel-item ">
+                                    <div class="container">
+                                        <div class="row d-flex flex-column flex-sm-row align-items-center">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-4">
+                                                <img src="pics/KU.avif" class="img-fluid">
+                                            </div>
+                                            <div class="col-md-4" style="max-width: 420px; max-height: 300px; padding:20px;">
+                                                <h1>Kuromi</h1>
+                                                <a>
+                                                    Kuromi is cheeky but oh so charming.  She enjoys writing in her diary and reading 
+                                                    romance novels. She’s the queen of all things spooky, too—so together, you can make 
+                                                    the theme park have a frightfully good time!</a>
+                                            </div>
+                                            <div class="col-md-2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="carousel-item ">
+                                    <div class="container">
+                                        <div class="row d-flex flex-column flex-sm-row align-items-center">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-4">
+                                                <img src="pics/TX.avif" class="img-fluid">
+                                            </div>
+                                            <div class="col-md-4" style="max-width: 420px; max-height: 300px; padding:20px;">
+                                                <h1>Tuxedosam</h1>
+                                                <a>
+                                                    As a fan of sophisticated and modern styles, Tuxedosam has opened a clothing 
+                                                    shop on the island—where he can tailor new clothes for all his friends. 
+                                                    Eventually, he creates a dye station to change the colors of clothes, 
+                                                    allowing for nearly endless options and the wardrobe of anyone’s dreams!</a>
+                                            </div>
+                                            <div class="col-md-2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="carousel-item ">
+                                    <div class="container">
+                                        <div class="row d-flex flex-column flex-sm-row align-items-center">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-4">
+                                                <img src="pics/CC.avif" class="img-fluid">
+                                            </div>
+                                            <div class="col-md-4" style="max-width: 420px; max-height: 300px; padding:20px;">
+                                                <h1>Cinnamoroll</h1>
+                                                <a>
+                                                    Cinnamoroll is a sweet pup who always wants to help his friends when needed. 
+                                                    He is quite shy but very friendly, and amazingly he can fly through the air 
+                                                    by floating with his huge ears. He’s so fast, he can pick up and deliver 
+                                                    anything around the island in a blink of an eye (even you)!</a>
+                                            </div>
+                                            <div class="col-md-2"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+
+                            <div class="row">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                                        <li data-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                                        <li data-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                                        <li data-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+                                        <li data-target="#carouselExampleIndicators" data-bs-slide-to="4"></li>
+                                    </ol>
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+                       </div>
+                       
+
                     </div>
-            
-                    <div class="carousel-item " 
-                    data-bs-interval="2000">
-                    <div class="container">
-                        <div class="row d-flex flex-column flex-sm-row align-items-center">
+                    
                 
-                            <div class="col-md-4">
-                                <img src="pics/HK.avif" class="img-fluid">
-                            </div>
-                            <div class="col-md-5" style="max-width: 420px; max-height: 300px; padding:20px;">
-                                <h1>Hello Kitty</h1>
-                                <a>
-                                Hello Kitty is here to brighten your day! 
-                                Always happy to lend a hand, she’s thrilled to open a new island cafe and 
-                                to make sure everyone has a great time together. Her hobbies include lots of 
-                                baking and making new friends. As she always says, "you can never have too many friends!"</a>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-            
-                    <div class="carousel-item ">
-                        <div class="container">
-                            <div class="row d-flex flex-column flex-sm-row align-items-center">
-                    
-                                <div class="col-md-4">
-                                    <img src="pics/HK.avif" class="img-fluid">
-                                </div>
-                                <div class="col-md-5" style="max-width: 420px; max-height: 300px; padding:20px;">
-                                    <h1>Hello Kitty</h1>
-                                    <a>
-                                    Hello Kitty is here to brighten your day! 
-                                    Always happy to lend a hand, she’s thrilled to open a new island cafe and 
-                                    to make sure everyone has a great time together. Her hobbies include lots of 
-                                    baking and making new friends. As she always says, "you can never have too many friends!"</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            
-                </div>
             
                 <button class="carousel-control-prev" 
                 type="button"
@@ -450,19 +530,11 @@
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon"></span>
                 </button>
-                <div class="col">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-                        <li data-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
-                        <li data-target="#carouselExampleIndicators" data-bs-slide-to="4"></li>
-                    </ol>
-                </div>
+                
         </div>
     </div>
 
-    
+    <!-- Yap -->
 
     <div class="container">
         <div class="row d-flex flex-column flex-sm-row align-items-center">
